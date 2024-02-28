@@ -6,6 +6,7 @@ import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
 import { Bounded } from "./Bounded";
 import { Heading } from "./Heading";
 import { HorizontalDivider } from "./HorizontalDivider";
+import { UserButton } from "@clerk/nextjs";
 
 const Profile = ({ name, description, profilePicture }) => {
   return (
@@ -60,7 +61,8 @@ export const Header = ({
   return (
     <Bounded as="header">
       <div className="grid grid-cols-1 justify-items-center gap-20">
-        <nav>
+        <nav className="flex flex-row gap-4 items-center">
+          <UserButton />
           <ul className="flex flex-wrap justify-center gap-10">
             <NavItem>
               <Link href="/">
