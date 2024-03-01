@@ -62,7 +62,7 @@ export const Header = ({
     <Bounded as="header">
       <div className="grid grid-cols-1 justify-items-center gap-20">
         <nav className="flex flex-row gap-4 items-center">
-          <UserButton />
+          <UserButton afterSignOutUrl="/sign-in" />
           <ul className="flex flex-wrap justify-center gap-10">
             <NavItem>
               <Link href="/">
